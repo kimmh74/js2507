@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var,let,const,typeof,자료형 과제
+        <link rel="stylesheet" href="./css/day01_0724.css">
+    </title>
+</head>
+
+<body>
+    <h1>JavaScript 변수</h1>
+    <h2>이 예시에서 x,y,z는 선언되지 않았습니다.</h2>
+    <p>처음 사용시 자동으로 선언됩니다.</p>
+    <p id="demo1"></p>
+    <script>
+        x = 5
+        y = 8
+        z = x + y
+
+        document.getElementById("demo1").innerHTML = "z의 값은 :" + z;
+    </script>
+
+    <p>--------------------------------------------------</p>
+
+    <h2>이 예에서 a,b,c는 var변수입니다.</h2>
+    <p id="demo2"></p>
+
+    <script>
+        var a = 3
+        var b = 9
+        var c = a + b
+
+        document.getElementById("demo2").innerHTML = "c의 값은 :" + c;
+    </script>
+
+    <p>--------------------------------------------------</p>
+
+    <h2>이 예에서 q,w,e는 let변수입니다.</h2>
+
+    <p id="demo3"></p>
+    <script>
+        
+         let q = 6
+         let w = 2
+         let e = q + w
+
+   document.getElementById("demo3").innerHTML="e의 값은:"+ e;
+
+    </script>
+
+    <p>--------------------------------------------------</p>
+
+   <h2>이 예에서 x,y,z는 const변수입니다.</h2>
+
+<p id="demo4"></p>
+<script>
+    const x = 5
+    const y = 6
+    const z = x + y ;
+
+    document.getElementById("demo4").innerHTML = "z의값은 :" +z;
+
+</script>
+
+
+</body>
+
+</html>
