@@ -4,65 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>var,let,const,typeof,자료형 과제
-        <link rel="stylesheet" href="./css/day01_0724.css">
-    </title>
+    <title>day01_0724 : var, let, const, typeof, 자료형 </title>
 </head>
 
 <body>
-    <h1>JavaScript 변수</h1>
-    <h2>이 예시에서 x,y,z는 선언되지 않았습니다.</h2>
-    <p>처음 사용시 자동으로 선언됩니다.</p>
-    <p id="demo1"></p>
-    <script>
-        x = 5
-        y = 8
-        z = x + y
-
-        document.getElementById("demo1").innerHTML = "z의 값은 :" + z;
-    </script>
-
-    <p>--------------------------------------------------</p>
-
-    <h2>이 예에서 a,b,c는 var변수입니다.</h2>
-    <p id="demo2"></p>
+    <h1>var,let,const,typeof,자료형에 대한 study01</h1>
+    <h2>var,let,const의 차이</h2>
 
     <script>
-        var a = 3
-        var b = 9
-        var c = a + b
+        //변수들값
+        let spring = "봄";
+        let summer = "여름";
+        let fall = "가을";
+        let winter = "겨울";
 
-        document.getElementById("demo2").innerHTML = "c의 값은 :" + c;
+        //배열 선언
+        let season = ["봄", "여름", "가을", "겨울"]; //대괄호 []
+
+        console.log(`변수들값:::${spring}---${summer}---${fall}---${winter}`);
+        document.writeln(`변수들값:::${spring}---${summer}---${fall}---${winter}<br>`);
+        console.log(`배열값:::::${season[0]}---${season[1]}---${season[2]}---${season[3]}`)
+        document.writeln(`배열값:::::${season[0]}---${season[1]}---${season[2]}---${season[3]}`)
     </script>
-
-    <p>--------------------------------------------------</p>
-
-    <h2>이 예에서 q,w,e는 let변수입니다.</h2>
-
-    <p id="demo3"></p>
+    <p><b>### id를 이용하는 방법</b></p>
+    <p id="demo"></p>
     <script>
-        
-         let q = 6
-         let w = 2
-         let e = q + w
-
-   document.getElementById("demo3").innerHTML="e의 값은:"+ e;
-
+        document.getElementById("demo").innerHTML = "나의 첫번째 자바"
+        document.getElementById("demo").innerHTML = "나의 첫번째 자바"
     </script>
 
-    <p>--------------------------------------------------</p>
 
-   <h2>이 예에서 x,y,z는 const변수입니다.</h2>
+    <p><b>ㅇ var예제_3개</b></p>
+    <script>
+        var a = 10;                          //var 변수 a선언
+        var a = 20;                         //호이스팅됨, var 재선언 가능함.
 
-<p id="demo4"></p>
-<script>
-    const x = 5
-    const y = 6
-    const z = x + y ;
+        console.log(a);
+        document.writeln(`a의값 : ${a}`)
+    </script>
+    <br>
+    <script>
+        function test() {
+            if (true) {
+                var x = 5;
 
-    document.getElementById("demo4").innerHTML = "z의값은 :" +z;
+            }
+            console.log(x);
+            document.writeln(x)
+        }
+        test()     
+    </script>
+    <br>
+    <script>
+        if (true) {
+            var name = "홍길동"
+            console.log(name)
+        }
+        console.log(name)               //var 는 함수 안/밖에서 재사용 가능함
+        document.writeln(name)
+    </script>
 
-</script>
+    <p><b>ㅇ let예제_3개</b></p>
+    <script>
+        let y
+        y = 5
+        console.log(y)
+        document.writeln(y)
+        // ㅣet y =20                      // let y=5로 선언되어 y=20으로 다시선언 안됨 err발생
+
+    </script>
+    <br>
+    <script>
+        if (true) {
+            let b = 20
+            console.log(b)
+            document.writeln(b)
+        }
+        // console.log(b)              // 함수 블록박에서는 let 선언 안됨 err발생
+    </script>
+    <br>
+    <script>
+        let c = 30
+        c = 40
+
+        console.log(c)
+        document.writeln(c)
+    </script>
+    <p><b>ㅇ const예제_3개</b></p>
+    <script>
+        const PI = 3.14
+
+        console.log(PI)
+        document.writeln(PI)
+        // PI = 3.1415                 //재할당 불가 err발생
+    </script>
+    <br>
+    <script>
+        const arr = [1, 2, 3]
+        arr.push(4)             // 내부값 변경가능 
+
+        console.log(arr)
+        document.writeln(arr)    //내부값 변경가능
+
+    </script>
+    <br>
+    <script>
+        const obj = { name: '홍길동' }
+        obj.name = '김철수'                     //내부 변경가능
+
+        console.log(obj)
+        document.writeln(`콘솔확인바람 obj값:${obj}`)
+    </script>
+    <p><b>ㅇ typeof 자료형 확인_변수 또는 값의 자료형을 문자열로 변환하는 연산자</b></p>
+    <script>
+        let num = 42
+        console.log(typeof num)
+        document.writeln(typeof num)
+
+    </script>
+    <br>
+    <script>
+        let isReady = true
+
+        console.log(typeof isReady)         //boolean(블리언) - true(참)/false(거짓)
+        document.writeln(typeof isReady)
+
+    </script>
+    <br>
+    <script>
+        let objective = { name: "jane" }
+
+        console.log(typeof objective)       // object 
+        document.writeln(typeof objective)
+
+    </script>
+    <P>
+        # typeof는 자료형 - nuber,string,boolean,object,Undefined(정의되지 않음),Null,Symbol(유일한식별자) <br>
+        - typeof 42 : "number" <br>
+        - typeof "hello" : "string" <br>
+        - typeof true : "boolean" <br>
+        - typeof Undefined : "Undefined" <br>
+        - typeof {a:1} : "object" <br>
+        - thpeof Null : "object" <br>
+        (null은 의도적으로 "값이 없음" 또는 "빈 값"을 나타내기 위해 사용함.)
+    </P>
+    <script>
+        console.log(typeof null)  // "object"
+    </script>
+
+    <script>
+        // if (varialbe === null){
+        //     //null일 때 실행
+        // }
+    </script>
+
+
+
+
+
+
 
 
 </body>
