@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript removeHandler</title>
+    <style>
+        #myDIV {
+            background-color: coral;
+            border: 1px solid;
+            padding: 50px;
+            color: white;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>자바스크립트 removeHandler 실습</h2>
+    <div id="myDIV">
+        <p>이 div 요소에는 주황색 필드 안에서 마우스를 움직일 때마다 무작위 숫자를 표시하는
+            onmousemove 이벤트 핸들러가 있습니다.</p>
+        <p>버튼을 클릭하면 div의 이벤트 핸들러가 제거됩니다.</p>
+        <button onclick="removeHandler()" id="myBtn">제거하는</button>
+    </div>
+    <p id="demo"></p>
+    <script src="./js/day08.js"></script>
+</body>
+
+</html>
