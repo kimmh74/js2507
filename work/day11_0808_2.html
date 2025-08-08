@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>생성자를 통해서 오브젝트를 만드는거</h2>
+    <h2>생성자 함수를 사용하는 방식: 클래스안에 함수 매소드</h2>
+    <script>
+        //클래스(빵틀)
+        class Bread {
+            //생성자
+            constructor(source) {
+                // (크림빵,팥빵,딸기빵)
+                this.source = source;
+            }
+            present() {
+                return `${this.source} 드세요`
+
+            }
+        }
+        //obj 오브젝트(빵)
+        const bread1 = new Bread("크림빵")
+        const bread2 = new Bread("팥빵")
+        const bread3 = new Bread("딸기빵")
+
+        const callBread1 = bread1.present()
+        const callBread2 = bread2.present()
+        const callBread3 = bread3.present()
+    
+        document.writeln(callBread1+`<br>`)
+        document.writeln(callBread2+`<br>`)
+        document.writeln(callBread3+`<br>`)
+
+    </script>
+    
+</body>
+
+</html>
